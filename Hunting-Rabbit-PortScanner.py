@@ -56,6 +56,11 @@ def parse_ports(port_range):
             ports.append(int(item))
     return ports
 
+def save_results_to_file(results, filename='scan_results.txt'):
+    with open(filename, 'w') as file:
+        for host, open_ports in results:
+            file.write(f'{host}: {", ".join(map(str, open_ports))}\n')
+
 parser = argparse.ArgumentParser(description='Hunting-Rabbit-PortScanner       author:浪飒')
 max_port = 65535  # 最大端口号
 default_ports = ','.join(map(str, range(1, max_port + 1)))
@@ -91,3 +96,8 @@ else:
     print('[-] No open ports found on any host.')
 
 print(f'[+] Scan completed in {elapsed_time:.2f} seconds.')
+
+# 保存结果到文件
+save_results_to_file(results)
+print(f'[+] Results saved to scan_results.txt.')
+
