@@ -1,8 +1,11 @@
-# Hunting-Rabbit-PortScanner
+git clone https://github.com/tulinstyle/tc-zj--1-665535-IP-.git
+cd tc-zj--1-665535-IP-
+chmod +x Hunting-Rabbit-PortScanner.py
+扫描单个主机：
+python3 Hunting-Rabbit-PortScanner.py 192.168.0.1 -v
+扫描网段的所有80端口
+python3 Hunting-Rabbit-PortScanner.py 192.168.0.0/24 -v -p 80
 
-Hunting-Rabbit-PortScanner（猎兔端口扫描器）：一款快速，准确的主机存活检测和端口扫描工具。
-
-GO版本：https://github.com/langsasec/Hunting-Rabbit-PortScanner-Go
 
 ## Usage
 
@@ -21,20 +24,6 @@ options:
   -w WORKERS, --workers WORKERS
                         Maximum number of worker threads for the scan (default: 64)
   -v, --verbose         Verbose output
-```
-
-## e.g.
-
-扫描单个主机：
-
-```cmd
-python Hunting-Rabbit-PortScanner.py 192.168.0.1 -v
-```
-
-扫描网段的所有80端口
-
-```
-python Hunting-Rabbit-PortScanner.py 192.168.0.0/24 -v -p 80
 ```
 
 ## help
