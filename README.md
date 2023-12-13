@@ -1,9 +1,15 @@
 git clone https://github.com/tulinstyle/tc-zj--1-665535-IP-.git
+
 cd tc-zj--1-665535-IP-
+
 chmod +x Hunting-Rabbit-PortScanner.py
+
 扫描单个主机：
+
 python3 Hunting-Rabbit-PortScanner.py 192.168.0.1 -v
+
 扫描网段的所有80端口
+
 python3 Hunting-Rabbit-PortScanner.py 192.168.0.0/24 -v -p 80
 
 
